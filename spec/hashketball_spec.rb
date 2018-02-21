@@ -21,6 +21,13 @@ describe 'hashketball' do
         expect(game_hash.values.first.keys).to include(key)
       end
     end
+
+    it 'returns an array of player hashes' do
+      expect(game_hash[:home][:players]).to be_a(Array)
+      expect(game_hash[:away][:players]).to be_a(Array)
+      expect(game_hash[:home][:players][0]).to be_a(Hash)
+      expect(game_hash[:away][:players][0]).to be_a(Hash)
+    end
   end
 
   describe '#num_points_scored' do

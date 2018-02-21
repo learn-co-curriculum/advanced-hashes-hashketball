@@ -22,7 +22,8 @@ The first method you will define is called `game_hash`. This method contains and
   * `:players`
 * The `:team_name` key points to a string of the team name.
 * The `:colors` key points to an array of strings that are that team's colors.
-* The `:players` key points to a hash of players whose names (as strings) are the keys to a hash containing their stats. The values for each player's names and their stats can be found in the table below. The stats keys should be formatted like this:
+* The `:players` key points to an array of player hashes. The keys for each player's hash can be found in the table below:
+    * `:player_name`
     * `:number`
     * `:shoe`
     * `:points`
@@ -119,6 +120,8 @@ end
 ```
 
 Open up the `hashketball.rb` file and add the line *require "pry"* at the top and copy and paste the above method. Then, beneath the `end` that closes the method definition, call the method (`good_practices`) and, in your terminal, run the file with `ruby hashketball.rb`. Play around with the methods in each binding until you get comfortable with the iteration. This should give you a stronger sense of how we iterate through so many levels of a nested hash and what happens on each level. **Use this method of placing LOTS of bindings when you iterate in order to solve this lab.**
+
+*If you are getting errors when attempting to use pry, make sure you call* `gem install pry` in your terminal.
 
 Okay, *now* we're ready to build out methods:
 
